@@ -38,7 +38,7 @@ class HomeScreen(Screen):
         # --- TIÊU ĐỀ ---------------------------------------------------
         title = Label(
             text='[b]Tic Tac Toe[/b]',
-            font_size='80sp',
+            font_size=TITLE_FS,
             font_name=FONT_LOBSTER,  
             size_hint=(1, 0.2),
             markup=True,
@@ -61,7 +61,7 @@ class HomeScreen(Screen):
                 text=f'[b]{label_text}[/b]',
                 halign='right', valign='middle',
                 size_hint_x=.4,
-                font_size='18sp',
+                font_size=SETTING_FS,
                 color=(.9, .9, .9, 1)
             )
 

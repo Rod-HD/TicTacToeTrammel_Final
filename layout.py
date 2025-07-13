@@ -12,12 +12,11 @@ from board_widget    import BoardWidget
 from board           import Board
 from game_controller import GameController
 from game_state      import GameState
-from game_observer   import GameObserver
 from themes          import Theme
 from sound_manager   import SoundManager
 from utils           import style_round_button, enable_press_darken, enable_click_sound
 from game_config     import (
-    DIM_ALPHA, BTN_RGBA, BTN_W, BTN_H, BOLD_FONT,
+    DIM_ALPHA, BTN_RGBA, BTN_W, BTN_H, FONT_BOLD,
     STATUS_X_TURN, STATUS_X_WIN, STATUS_O_WIN, STATUS_DRAW,
 ) 
 
@@ -40,7 +39,7 @@ class TicTacToeLayout(FloatLayout):
         def __init__(self, text: str, rgba, **kw):
             super().__init__(**kw)
             self.markup, self.text = True, text
-            self.font_name         = BOLD_FONT
+            self.font_name         = FONT_BOLD
             self.size_hint         = (None, None)
             self.width, self.height = BTN_W, BTN_H
             self.halign = self.valign = "center"
@@ -99,7 +98,7 @@ class TicTacToeLayout(FloatLayout):
         # --- Nhãn trạng thái dưới cùng -----------------------------
         self._status_lbl = Label(
             text=self.status_message, markup=True,
-            font_name=BOLD_FONT, font_size="18sp",
+            font_name=FONT_BOLD, font_size="18sp",
             size_hint=(None, None), width=BTN_W,
             pos_hint={"center_x": 0.5, "y": 0.02},
             halign="center", valign="middle",
@@ -142,9 +141,9 @@ class TicTacToeLayout(FloatLayout):
 
     def on_state_change(self, state: GameState, next_turn: Optional[str]):
         msg = {
-            GameState.X_WON: "[b]X wins![/b]",
-            GameState.O_WON: "[b]O wins![/b]",
-            GameState.DRAW : "[b]Draw![/b]",
+            GameState.X_WON: STATUS_X_WIN,
+            GameState.O_WON: STATUS_O_WIN,
+            GameState.DRAW : STATUS_DRAW,
         }.get(state, f"[b]{next_turn}'s turn[/b]")
         self._status_lbl.text = msg
 

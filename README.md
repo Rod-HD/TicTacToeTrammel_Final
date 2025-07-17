@@ -38,9 +38,10 @@ Một phiên bản mở rộng của trò chơi Tic Tac Toe cổ điển, đư�
 2.  Tải file `.apk` về thiết bị Android của bạn.
 3.  Mở file và tiến hành cài đặt (bạn có thể cần cho phép cài đặt từ nguồn không xác định trong cài đặt của điện thoại).
 
-## 📄 Báo cáo đồ án
+**Lưu ý quan trọng:** 
+- Khi chơi game này trên điện thoại, vui lòng **sử dụng bàn phím mặc định** của điện thoại **để tránh gây lỗi không thể xóa giá trị** hiện có trong ô text input. Còn nếu `vẫn muốn sử dụng các bàn phím khác` như Laban Key, vui lòng **trước khi xóa giá trị hiện có** trong ô text input, hãy **nhấn vào 1 phím** ký tự là **chữ bất kỳ** (`không phải số`) để **kích hoạt được nút backspace** của bàn phím điện thoại đó, **khi đó có thể xóa bình thường**, vui lòng **lặp lại** với **mỗi lần ấn vào ô** text input **mà muốn xóa đi giá trị hiện có**.
 
-Để hiểu rõ hơn về quá trình phát triển, thuật toán và các chi tiết kỹ thuật, vui lòng tham khảo [báo cáo đầy đủ tại đây](https://your-report-link-here.com).
+Để hiểu rõ hơn về quá trình phát triển, thuật toán và các chi tiết kỹ thuật, vui lòng tham khảo [báo cáo đầy đủ tại đây](https://sg.docworkspace.com/d/sIFbMpojLAbWa4sMG?sa=601.1037).
 
 ## 👨‍💻 Sinh viên thực hiện
 
